@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - DEV!</title>
+    <link rel="stylesheet" type="text/css" href="mainCSS.css">
+    <script src="mainJS.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="texto">
+        <h1>Formulario de recrutamento</h1>
+    </div>
+    <div class="principal">
+
+        <h2>Responda o formulario abaixo</h2>
+        <div class="formulario">
+            <form>
+                <div>
+                    <label for="NomeDev">Informe seu nome:</label>
+                    <input type="text" name="NomeDev" id="NomeDev" placeholder="Digite seu nome">
+                    <span id="erro-nome"></span>
+                </div>                
+                
+                <div>
+                    <label for="SobrenomeDev">Informe seu sobrenome:</label>
+                    <input type="text" name="SobrenomeDev" id="SobrenomeDev" placeholder="Digite seu sobrenome">
+                    <span id="erro-sbr"></span>
+                </div>
+
+                <div>
+                    <label for="EmailDev">Informe seu email:</label>
+                    <input type="text" name="EmailDev" id="EmailDev" placeholder="Digite seu email">
+                    <span id="erro-email1"></span>
+                </div>
+
+                <h2>Selecione as tecnologias que você se enquadra</h2>
+
+                <div class="t">
+                    <input type="checkbox" value="Html" name="tec1">Html
+                    <input type="checkbox" value="Html" name="tec2">Python
+                    <input type="checkbox" value="JS" name="tec3">JavaScript
+                    <input type="checkbox" value="Java" name="tec4">Java
+                    <input type="checkbox" value="React" name="tec5">React
+                    <input type="checkbox" value="C++" name="tec6">C++
+                    <input type="checkbox" value="C#" name="tec6">C#
+                </div>
+
+                <h2>Informe sua area de desenvolvimento</h2>
+
+                <div class="area">
+                    <input type="radio" name="area" value="front">Front end
+                    <input type="radio" name="area" value="Back">Back end
+                    <input type="radio" name="area" value="Full">Full stack
+                </div>
+                
+                <div>
+                    <h2>Nos conte sobre sua experiencia</h2>
+                    <textarea rows="3" cols="55"></textarea>        
+                </div>
+
+                <div>
+                    <h2>Tudo certo? envie o formulario clicando no botão abaixo</h2>
+                    <button onclick="EnviarForm()" type="button">Enviar formulario</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
