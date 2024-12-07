@@ -58,6 +58,52 @@ function EnviarForm(){
         erroEmail1.style.display = 'none'; 
     }
 
+    //check box
+    let check = document.getElementsByName('tec');
+    let erroCheck = document.getElementById('erro-check');
+    let estaChek = false;
+
+    //validação checkBox
+    for(let i=0; i<check.length; i++){
+        if(check[i].checked){
+            estaChek = true;
+        }
+    }
+
+    //verifica se esta marcado
+
+    if(estaChek == false){
+        erroCheck.style.display = 'flex';
+
+        erroCheck.innerText = 'Pelo menos uma opção deve estar marcada';
+
+        valido = false;
+    }else{
+        erroCheck.style.display = 'none';
+    }
+
+    //radio
+    let area = document.getElementsByName('area');
+    let erroRadio = document.getElementById('erro-radio');
+    let checkRadio = false;
+
+    //validação do radio
+    for(let i =0; i<area.length; i++){
+        if(area[i].checked){
+            checkRadio = true;
+        }
+    }
+    
+    if(checkRadio == false){
+        erroRadio.style.display = 'flex';
+
+        erroRadio.innerText = 'você deve marcar uma opção';
+
+        valido = false;
+    }else{
+        erroRadio.style.display = 'none';
+    }
+
     if(valido){
         alert('Seu formulario foi enviado!, obrigado')
     }
